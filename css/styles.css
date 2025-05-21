@@ -253,7 +253,7 @@ input[type="checkbox"]{
 }
 
 /*haciendo que todos excepto el checkbox ocupen el 100% del form*/
-input:not([type="checkbox"]), label:not([classs="hamburguer"]), textarea {
+input:not([type="checkbox"]), label:not([class="hamburguer"]), textarea {
        width: 100%;
 }
 
