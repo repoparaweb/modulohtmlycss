@@ -38,27 +38,28 @@
     <p class="presupuesto-text">Si deseas recibir más información sobre nuestra labor o colaboraciones, por favor rellena el siguiente formulario.</p>
 
     <div class="form-container">
-      <form action="#" method="post">
+      <form>
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
+        <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z áÁéÉñÑÜü]+">
+        <!--en el caso del telefono admito 6 o 7 por los moviles y 8 o 9 pos los fijos,
+        ademas doy la posibilidad de que introduzcan o no espacios en blancos o guiones-->
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
+        <input type="tel" id="telefono" name="telefono" pattern="[6798]\d{2}[\s\-]?\d{3}[\s\-]?\d{3}" title="Numeros de 9 digitos">
+        
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" pattern="\w+([.]\w+)*@\w+([.]\w+)*[.][a-zA-Z]{2,5}">
+        
         <label for="proyecto">Detalles del Proyecto:</label>
         <textarea id="proyecto" name="proyecto" rows="6"></textarea><br>
 
-        <input type="checkbox" id="miCheckbox">
+        <input type="checkbox" id="miCheckbox" required>
         <label for="miCheckbox">Acepto los términos</label>
 
-        <!--explico por que use <a> en vez de button en el css-->
-        <div class="boton-contenedor">
-
-          <a href="#" class="real-button">Enviar</a> 
-          <a href="#" class="real-button">Borrar Datos</a>
+        <div class="button-group">
+          <input class="buttons" type="submit" value="Enviar Formulario">
+          <input class="buttons" type="reset" value="Limpiar Datos"> 
         </div>
- 
+
       </form>
     </div>
   </main>
